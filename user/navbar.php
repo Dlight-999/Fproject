@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/user.css">
+</head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="#"><img src="/images/MarkupTag-white-logo.png" alt="Logo" class="img-fluid" /></a>

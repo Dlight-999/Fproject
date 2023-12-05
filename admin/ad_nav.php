@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
 <script src="../js/admin.js"></script>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
@@ -145,4 +148,5 @@
         </nav>
       </div>
     </div>
-   
+    </body>
+    </html>
