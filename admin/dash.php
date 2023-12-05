@@ -1,5 +1,5 @@
 <?php
-    include('../user/bootstrap_headder.php');
+    
     include('./ad_nav.php');
 
 ?>

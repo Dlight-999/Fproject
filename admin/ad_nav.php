@@ -1,3 +1,7 @@
+<?php
+include('../config/constants.php');
+include('../user/bootstrap_headder.php');
+?>
 <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
@@ -123,7 +127,7 @@
             <li>
               <a href="#" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                <span>Pages</span>
+                <span>Admins</span>
               </a>
             </li>
             <li class="my-4"><hr class="dropdown-divider bg-light" /></li>

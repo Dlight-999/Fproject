@@ -6,9 +6,16 @@
 <main class="mt-5 pt-3">
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
+    <?php
+            if(isset($_SESSION['delete'])){
+                echo $_SESSION['delete'];
+                unset($_SESSION['delete']);
+              }
+            ?>
         <div class="d-flex align-items-center justify-content-between mb-4">
+           
             <h6 class="mb-0">Admins</h6>
-            <a href="">Add admin</a>
+            <a href="add-admin.php">Add admin</a>
         </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -42,8 +49,8 @@
                                           <td><?php echo $email ?></td>
                                           <td>
                                           <a class="btn btn-sm btn-primary" href="<?php echo siteurl;?>admin/update-admin.php?admin_id=<?php echo $admin_id;?>">Update</a>
-                                        <a class="btn btn-sm btn-warning" href="<?php echo siteurl;?>backend/changepwd.php?admin_id=<?php echo $admin_id;?>">Change Password</a>
-                                        <a class="btn btn-sm btn-danger" href="<?php echo siteurl;?>backend/delete-admin.php?admin_id=<?php echo $admin_id;?>">Delete</a>
+                                        <a class="btn btn-sm btn-warning" href="<?php echo siteurl;?>admin/changepwd.php?admin_id=<?php echo $admin_id;?>">Change Password</a>
+                                        <a class="btn btn-sm btn-danger" href="<?php echo siteurl;?>admin/delete-admin.php?admin_id=<?php echo $admin_id;?>">Delete</a>
                                         </td>  
                                         </tr>
                                           <?php
