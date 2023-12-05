@@ -7,8 +7,8 @@ CREATE TABLE `users` (
 );
 
 CREATE TABLE `admins` (
-  admin_id INT PRIMARY KEY AUTO_INCREMENT,
-  a_uname VARCHAR(255) NOT NULL UNIQUE,
-  email VARCHAR(255) NOT NULL,
-  password_hash VARCHAR(255) NOT NULL,
+  `admin_id` INT PRIMARY KEY AUTO_INCREMENT,
+  `a_uname` VARCHAR(255) NOT NULL UNIQUE,
+  `email` VARCHAR(255) NOT NULL,
+  `password_hash` VARCHAR(255) NOT NULL,
 );
