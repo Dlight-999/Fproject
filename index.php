@@ -1,11 +1,11 @@
 <?php
-    include('./bootstrap_headder.php');
-    include('./navbar.php');
-    include('./hero.php');
+    include('./user/bootstrap_headder.php');
+    include('./user/index.php/navbar.php');
+    include('./user/hero.php');
 
 
 
 
 
-    include('./footer.php')
+    include('./user/footer.php');
 ?>
