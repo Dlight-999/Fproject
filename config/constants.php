@@ -11,4 +11,6 @@
     define('db_pass','');
     define('db_name','Fproject');
 
+    $conn = mysqli_connect(LOCALHOST,db_uname,db_pass, db_name) or die(mysqli_error($conn));
+    $db_select = mysqli_select_db($conn,'Fproject');
 ?>
