@@ -11,6 +11,14 @@
                     <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-dark">
                         <div class="text-center">
                             <h3 class="text-primary">Admin Account</h3>
+                            <p>
+                            <?php
+            if(isset($_SESSION['login'])){
+                echo $_SESSION['login'];
+                unset($_SESSION['login']);
+              }
+            ?>
+                            </p>
                         </div>
                         <div class="p-4">
                             <form action="" method="post">
