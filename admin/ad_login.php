@@ -2,13 +2,15 @@
     include('../user/bootstrap_headder.php')
 
 ?>
-
-<div class="container-fluid vh-100 bg-dark" style="margin-top:300px">
-            <div class="" style="margin-top:200px">
+<link rel="stylesheet" href="../css/admin.css">k
+</head>
+<body class="bg-primary">
+<div class="container-fluid vh-100" style="margin-top:50px">
+            <div class="" style="margin-top:20px">
                 <div class="rounded d-flex justify-content-center">
-                    <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
+                    <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-dark">
                         <div class="text-center">
-                            <h3 class="text-primary">Create Account</h3>
+                            <h3 class="text-primary">Admin Account</h3>
                         </div>
                         <div class="p-4">
                             <form action="">
@@ -28,14 +30,14 @@
                                     <input type="password" class="form-control" placeholder="password">
                                 </div>
                                 <div class="d-grid col-12 mx-auto">
-                                    <button class="btn btn-primary" type="button"><span></span> Sign up</button>
+                                    <button class="btn btn-primary" type="button"><span></span> Log In</button>
                                 </div>
-                                <p class="text-center mt-3">Already have an account?
-                                    <span class="text-primary">Sign in</span>
-                                </p>
+                                
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </body>
+        </html>
