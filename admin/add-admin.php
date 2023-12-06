@@ -31,7 +31,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="pass2" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="pass2" name="pass1" placeholder="Confirm your password">
+                    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm your password">
                 </div>
                     <input type="submit" class="btn btn-primary" name="submit" value="Add admin">
             
