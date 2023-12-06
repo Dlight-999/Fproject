@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="loginBox">
-            <h3>Sign in</h3>
+            <h3>Sign up</h3>
             <form action="login.php" method="post">
                 <div class="mb-3">
                     <label for="uname" class="form-label">Username</label>
@@ -23,11 +23,11 @@
                         <input id="pass" type="password" name="Password" class="form-control" placeholder="Password">
                     </div>
                 </div>
-                <input type="submit" class="btn btn-primary" value="Login">
+                <input type="submit" class="btn btn-primary" value="Signup">
             </form>
             <a class="link" href="#">Forget Password<br></a>
             <div class="text-center">
-               <p style="color: #0d6efd;"><a href="ureg.php">Signup</a></p>
+                <p style="color: #0d6efd;"><a href="ulogin.php">Login</a></p>
             </div>
         </div>
     </div>
