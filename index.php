@@ -1,4 +1,5 @@
 <?php
+    include('./config/constants.php');
     include('./user/bootstrap_headder.php');
 ?>
 <link rel="stylesheet" href="css/user.css">

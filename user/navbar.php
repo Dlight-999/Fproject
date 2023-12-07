@@ -30,9 +30,42 @@
                     <a class="nav-link" href="#">Contact Us</a>
                 </li>
             </ul>
-            <div class="d-flex">
-                <button class="btn btn-light ms-3"><a href="./user/login.php">Login</a></button>
+           <div class="d-flex">
+                <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Account
+                </button>
+                <?php
+             if(isset($_SESSION['ulogin'])){
+                $email = $_SESSION['umail'];
+                echo "
+                <ul class='dropdown-menu' aria-labelledby='loginDropdown'>
+                <li><a class='dropdown-item' href='http://localhost/Fproject/user/profile.php?email=$email'>Edit Profile</a></li>
+                <li><a class='dropdown-item' href='http://localhost/Fproject/user/changepwd.php?email=$email'>Change Password</a></li>
+                <li><a class='dropdown-item' href='http://localhost/Fproject/user/profile.php?email=$email'>Booking History</a></li>
+                <li><a class='dropdown-item' href='http://localhost/Fproject/user/profile.php?email=$email'>Logout</a></li>
+            </ul>
+                ";
+               
+                }
+                else{
+                echo "
+                <ul class='dropdown-menu' aria-labelledby='loginDropdown'>
+                <li><a class='dropdown-item' href='http://localhost/Fproject/user/ulogin.php'>Login</a></li>
+                <li><a class='dropdown-item' href='http://localhost/Fproject/user/ureg.php'>Sign Up</a></li>
+           
+            </ul>
+                ";
+    
+                }
+                ?>
+             
             </div>
+        </div>
+
+     
+
+
         </div>
     </div>
 </nav>

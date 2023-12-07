@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" >
         <div class="loginBox">
             <h3>Sign up</h3>
             <h6>
@@ -92,10 +92,8 @@
         }
     }
     ?>
-            <a class="link" href="#">Forget Password<br></a>
-            <div class="text-center">
+
                 <p style="color: #0d6efd;"><a href="ulogin.php">Login</a></p>
-            </div>
         </div>
     </div>
 </body>
