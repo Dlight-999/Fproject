@@ -3,7 +3,12 @@ include('./ad_nav.php');
 ?>
 
 </head>
+<?php
 
+if (isset($_GET['admin_id'])) {
+    $admin_id = $_GET['admin_id'];
+}
+?>
 <body>
 
 <main class="mt-5 pt-3">
@@ -62,7 +67,7 @@ include('./ad_nav.php');
 
                     if ($res) {
                         $_SESSION['chg'] = "Password Changed Successfully";
-                        header('location:' . siteurl . 'admin/admins.php');
+                        header('location:' . siteurl . 'admin/ad_login.php');
                         exit();
                     } else {
                         $_SESSION['chg'] = "Failed to change password";
@@ -71,6 +76,7 @@ include('./ad_nav.php');
                     }
                 }
                 ?>
+              
             </div>
         </div>
     </div>

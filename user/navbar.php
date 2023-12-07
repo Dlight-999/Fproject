@@ -43,7 +43,7 @@
                 <li><a class='dropdown-item' href='http://localhost/Fproject/user/profile.php?email=$email'>Edit Profile</a></li>
                 <li><a class='dropdown-item' href='http://localhost/Fproject/user/changepwd.php?email=$email'>Change Password</a></li>
                 <li><a class='dropdown-item' href='http://localhost/Fproject/user/profile.php?email=$email'>Booking History</a></li>
-                <li><a class='dropdown-item' href='http://localhost/Fproject/user/profile.php?email=$email'>Logout</a></li>
+                <li><a class='dropdown-item' href='http://localhost/Fproject/user/ulogout.php'>Logout</a></li>
             </ul>
                 ";
                
