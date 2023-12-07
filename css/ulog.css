@@ -109,6 +109,9 @@ label{
   text-align: center;
   display: block;
 }
+h6{
+  color: #ff4444;
+}
 
 a:hover {
   color: #0d6efd;
