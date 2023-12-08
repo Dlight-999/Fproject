@@ -18,6 +18,11 @@
                 echo $_SESSION['login'];
                 unset($_SESSION['login']);
               }
+            if(isset($_SESSION['no-log'])){
+                echo $_SESSION['no-log'];
+                unset($_SESSION['no-log']);
+              }
+            ?>
             ?>
                             </p>
                         </div>
@@ -55,7 +60,7 @@
                         $hashed_password = $row['password_hash'];
                         if (password_verify($password, $hashed_password)) {
                             $_SESSION['login']="Logged in Successfully";
-                            $_SESSION['user']= $uname;
+                            $_SESSION['admin']= $uname;
                          header('location:'.siteurl.'admin/dash.php');
                         } else {
                           $_SESSION['login']="Username or Password did not match";
