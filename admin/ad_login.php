@@ -23,7 +23,7 @@
                 unset($_SESSION['no-log']);
               }
             ?>
-            ?>
+            
                             </p>
                         </div>
                         <div class="p-4">
