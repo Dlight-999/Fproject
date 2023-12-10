@@ -32,25 +32,26 @@
         <div class="input-grp">
           <label for="">Select Room Type</label>
           <select class="custom-select">
-            <option value="1">Economy class</option>
-            <option value="2">Business class</option>
+            <option value="1">Standard</option>
+            <option value="2">Delux</option>
+            <option value="2">Suite</option>
+          </select>
+        </div>
+
+        <div class="input-grp">
+          <label for="">Select Bed Type</label>
+          <select class="custom-select">
+            <option value="1">Single</option>
+            <option value="2">Double</option>
+            <option value="">Twin</option>
           </select>
         </div>
         
-        <div class="radio-btn">
-        <input type="radio" class="btn" name="check" checked="checked" /><span
-          >One Way</span
-        >
-        <input type="radio" class="btn" name="check" checked="checked" /><span
-          >Multi-city</span
-        >
-        <input type="radio" class="btn" name="check" checked="checked" /><span
-          >Multi-city</span
-        >
+        
       </div>
         <div class="input-grp">
           <button type="button" class="btn btn-primary flight">
-            Show flight
+            Book Room
           </button>
         </div>
       </div>

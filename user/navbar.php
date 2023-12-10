@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="../index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
@@ -21,9 +21,9 @@
                         View More
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Web Development</a></li>
-                        <li><a class="dropdown-item" href="#">Web Designing</a></li>
-                        <li><a class="dropdown-item" href="#">Android Development</a></li>
+                        <li><a class="dropdown-item" href="#">ae</a></li>
+                        <li><a class="dropdown-item" href="#">ae</a></li>
+                        <li><a class="dropdown-item" href="#">ae</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
