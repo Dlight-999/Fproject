@@ -9,12 +9,21 @@
 			<div class="lc-block mb-3">
 				<div editable="rich">
 					<h2 class="fw-bold display-5">Brand Name</h2>
+					<h3>Where Every Stay Feels Like a Dream Getaway!
+</h3>
 				</div>
 			</div>
 
 			<div class="lc-block mb-3">
 				<div editable="rich">
-					<p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis tempore dolores magnam nobis molestiae, veritatis odio, voluptatem vel magni porro impedit ullam quaerat autem temporibus, eius quod ad nemo.
+					<p class="lead">Indulge in Unparalleled Comfort and Luxury
+Discover a haven of tranquility and sophistication
+that goes beyond the ordinary.
+
+Book Your Perfect Escape Today
+and Experience the Pinnacle of Hospitality.
+
+Your Journey Starts Here.
 					</p>
 				</div>
 			</div>
