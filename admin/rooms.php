@@ -64,7 +64,7 @@
 
                                           <td>
                                           <a class="btn btn-sm btn-primary" href="<?php echo siteurl;?>admin/update_room.php?id=<?php echo $id;?>">Update</a>
-                                        <a class="btn btn-sm btn-danger" href="<?php echo siteurl;?>admin/delete_room.php?admin.php?id=<?php echo $id;?>">Delete</a>
+                                        <a class="btn btn-sm btn-danger" href="<?php echo siteurl;?>admin/delete_room.php?id=<?php echo $id;?>">Delete</a>
                                         </td>  
                                         </tr>
                                           <?php

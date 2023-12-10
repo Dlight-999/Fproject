@@ -128,6 +128,12 @@ include('../user/bootstrap_headder.php');
                 <span>Admins</span>
               </a>
             </li>
+            <li>
+              <a href="./rooms.php" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                <span>Rooms</span>
+              </a>
+            </li>
             <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
             <li>
               <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
