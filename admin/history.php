@@ -13,7 +13,7 @@
                 }
             ?>
             <div class="d-flex align-items-center justify-content-between mb-4">
-                <h6 class="mb-0">User</h6>
+                <h6 class="mb-0">Booking History</h6>
             </div>
             <div class="table-responsive " style="padding-bottom:250px;">
                 <table class="table text-start align-middle table-bordered table-hover mb-0">

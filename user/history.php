@@ -1,7 +1,10 @@
 <?php
     include('../config/constants.php');
+    include('./checklog.php');
     include('../user/bootstrap_headder.php');
     include('../user/navbar.php');
+
+    $email=$_GET['email'];
 ?>
 
 </head>
@@ -17,7 +20,7 @@
             ?>
         <div class="d-flex align-items-center justify-content-between mb-4">
            
-            <h6 class="mb-0">User</h6>
+            <h6 class="mb-0">Booking History</h6>
         </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -40,7 +43,7 @@
                             </thead>
                             <tbody>
                             <?php
-                                    $sql = "SELECT * FROM booking";
+                                    $sql = "SELECT * FROM booking WHERE email='$email";
                                     $res = mysqli_query($conn, $sql);
                                     if($res == TRUE){
                                         $count = mysqli_num_rows($res);
