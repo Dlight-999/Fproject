@@ -19,7 +19,7 @@
       </div>
       <div class="cta-section">
         <div>$129.00</div>
-        <a href="#" class="btn btn-dark">Book Now</a>
+        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Standard";?>" class="btn btn-dark" class="btn btn-dark">Book Now</a>
       </div>
     </div>
   </div>
@@ -39,7 +39,8 @@
       </div>
       <div class="cta-section">
         <div class="text-white">$129.00</div>
-        <a href="#" class="btn btn-dark">Book Now</a>
+        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Delux";?>" class="btn btn-dark">Book Now</a>
+       
       </div>
     </div>
   </div>
@@ -61,7 +62,7 @@
       </div>
       <div class="cta-section">
         <div class="text-white">$129.00</div>
-        <a href="#" class="btn btn-dark">Book Now</a>
+        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Suite";?>" class="btn btn-dark" class="btn btn-dark">Book Now</a>
       </div>
     </div>
   </div>

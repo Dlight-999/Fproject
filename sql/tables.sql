@@ -12,3 +12,24 @@ CREATE TABLE `admins` (
   `email` VARCHAR(255) NOT NULL,
   `password_hash` VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE room (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    room_no INT UNIQUE KEY,
+    room_type VARCHAR(50) NOT NULL,
+    bed_type VARCHAR(50) NOT NULL,
+    rate DECIMAL(10, 2) NOT NULL,
+    status ENUM('Available', 'Booked') DEFAULT 'Available'
+);
+
+CREATE TABLE booking (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    room_id INT NOT NULL,
+    user_id INT NOT NULL,
+    checkin_date DATE NOT NULL,
+    checkout_date DATE NOT NULL,
+    status ENUM('Confirmed', 'Cancelled') DEFAULT 'Confirmed',
+    total_amount DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (room_id) REFERENCES room(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
