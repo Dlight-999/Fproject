@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admins` (
-  `admin_id` int(11) NOT NULL,
+  `admin_id` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `a_uname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password_hash` varchar(255) NOT NULL
@@ -67,7 +67,7 @@ CREATE TABLE `booking` (
 --
 
 CREATE TABLE `room` (
-  `id` int(11) NOT NULL,
+  `id` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `room_no` int(11) DEFAULT NULL,
   `room_type` varchar(50) NOT NULL,
   `bed_type` varchar(50) NOT NULL,
@@ -89,7 +89,7 @@ INSERT INTO `room` (`id`, `room_no`, `room_type`, `bed_type`, `rate`, `status`) 
 --
 
 CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
   `username` varchar(80) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
