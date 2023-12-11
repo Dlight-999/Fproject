@@ -49,14 +49,14 @@ INSERT INTO `admins` (`admin_id`, `a_uname`, `email`, `password_hash`) VALUES
 --
 
 CREATE TABLE `booking` (
-  `id` int(11) NOT NULL,
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `room_id` int(11) NOT NULL,
   `fname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `phone` int(11) NOT NULL,
+  `phone` VARCHAR(15) NOT NULL,
   `checkin_date` date NOT NULL,
   `checkout_date` date NOT NULL,
-  `status` enum('Confirmed','Cancelled') DEFAULT 'Confirmed',
+  `status` enum('Confirmed','Cancelled','Pending') DEFAULT 'Pending',
   `total_amount` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
