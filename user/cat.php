@@ -1,8 +1,13 @@
-<?php
-    
+
+<?php 
+$mail = '';
+if(isset($_SESSION['umail'])){
+  $mail = $_SESSION['umail'];
+
+}
 ?>
 <div class="container-no-margin col-xxl-8 px-4 py-5 bg-primary">
-   
+
   
   <div class="card bg-warning mt-4">
     <img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg" class="card-img-top" alt="...">
@@ -19,7 +24,7 @@
       </div>
       <div class="cta-section">
         <div>$129.00</div>
-        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Standard";?>" class="btn btn-dark" class="btn btn-dark">Book Now</a>
+        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Standard";?>&email=<?php echo $mail?>" class="btn btn-dark" class="btn btn-dark">Book Now</a>
       </div>
     </div>
   </div>
@@ -39,7 +44,7 @@
       </div>
       <div class="cta-section">
         <div class="text-white">$129.00</div>
-        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Delux";?>" class="btn btn-dark">Book Now</a>
+        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Delux";?>&email=<?php echo $mail?>" class="btn btn-dark">Book Now</a>
        
       </div>
     </div>
@@ -62,7 +67,7 @@
       </div>
       <div class="cta-section">
         <div class="text-white">$129.00</div>
-        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Suite";?>" class="btn btn-dark" class="btn btn-dark">Book Now</a>
+        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Suite";?>&email=<?php echo $mail?>" class="btn btn-dark" class="btn btn-dark">Book Now</a>
       </div>
     </div>
   </div>

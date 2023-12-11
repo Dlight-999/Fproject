@@ -1,21 +1,72 @@
 <?php
 include('../config/constants.php');
+include('../user/checklog.php');
 include('../user/bootstrap_headder.php');
 include('../user/navbar.php');
 
 $minimumDate = date('Y-m-d', strtotime('+1 day'));
 
-
-    $room_type = $_GET['room_type'];
-    $sql = "SELECT room_no FROM room WHERE room_type = '$room_type' AND status = 'Available'";
-    $result = $conn->query($sql);
+// Fetch available room numbers based on the provided room type
+$room_type = $_GET['room_type'];
+$sql = "SELECT room_no FROM room WHERE room_type = '$room_type' AND status = 'Available'";
+$result = $conn->query($sql);
 $roomNumbers = [];
 while ($row = $result->fetch_assoc()) {
     $roomNumbers[] = $row['room_no'];
 }
+
+$email=$_GET['email'];
+
+$sql1 = "SELECT username, email, phone FROM users WHERE email = '$email'";
+$result = $conn->query($sql1);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    
+    $username = $row['username'];
+    $email = $row['email'];
+    $phone = $row['phone'];
+
+}
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    $fullName = mysqli_real_escape_string($conn, $_POST['uname']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $phone = mysqli_real_escape_string($conn, $_POST['phone']);
+    $checkinDate = mysqli_real_escape_string($conn, $_POST['checkin']);
+    $checkoutDate = mysqli_real_escape_string($conn, $_POST['checkout']);
+    $roomType = mysqli_real_escape_string($conn, $_POST['roomType']);
+    $selectedRoomNo = mysqli_real_escape_string($conn, $_POST['availableRoom']);
+
+    // Validate dates and other inputs
+    // ...
+
+    // Insert the booking information into the booking table
+    $sqlBooking = "INSERT INTO booking (room_id, fname, email, phone, checkin_date, checkout_date, status, total_amount)
+        VALUES ('$selectedRoomNo', '$fullName', '$email', '$phone', '$checkinDate', '$checkoutDate', 'Confirmed', 100.00)";
+    
+    if (mysqli_query($conn, $sqlBooking)) {
+        // Update room status to 'Booked'
+        $sqlUpdateRoom = "UPDATE room SET status = 'Booked' WHERE room_no = '$selectedRoomNo'";
+        mysqli_query($conn, $sqlUpdateRoom);
+
+        echo "Room booked successfully.";
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+}
+
+mysqli_close($conn);
 ?>
 
-<link rel="stylesheet" href="../css/book.css">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking</title>
+    <link rel="stylesheet" href="../css/book.css">
 </head>
 
 <body>
@@ -23,26 +74,26 @@ while ($row = $result->fetch_assoc()) {
         <form action="" method="post">
             <div class="booking-form">
                 <label for="uname">Full Name</label>
-                <input type="text" class="form-control" name="uname" placeholder="Full Name" />
+                <input type="text" class="form-control" name="uname" placeholder="Full Name" value="<?php echo $username ?>" required />
                 <div class="input-grp">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter email" />
+                    <input type="email" class="form-control" name="email" placeholder="Enter email" value="<?php echo $email ?>"required />
                 </div>
                 <div class="input-grp">
                     <label for="phone">Phone</label>
-                    <input type="Number" maxlength="10" placeholder="Phone number" class="form-control " name="phone" />
+                    <input type="number" maxlength="10" placeholder="Phone number" class="form-control " name="phone" value="<?php echo $phone ?>" required />
                 </div>
                 <div class="input-grp">
-                    <label for="checkin">Checkin Date</label>
+                    <label for="checkin">Check-in Date</label>
                     <input type="date" name="checkin" class="form-control select-date" min="<?php echo $minimumDate; ?>" required />
                 </div>
                 <div class="input-grp">
-                    <label for="checkout">Checkout Date</label>
+                    <label for="checkout">Check-out Date</label>
                     <input type="date" name="checkout" class="form-control select-date" min="<?php echo $minimumDate; ?>" required />
                 </div>
                 <div class="input-grp">
                     <label for="roomType">Select Room Type</label>
-                    <select class="custom-select" name="roomType">
+                    <select class="custom-select" name="roomType" required>
                         <?php
                         if (isset($_GET['room_type'])) {
                             $selectedRoomType = $_GET['room_type'];
@@ -53,10 +104,10 @@ while ($row = $result->fetch_assoc()) {
                 </div>
                 <div class="input-grp">
                     <label for="availableRoom">Select Available Room</label>
-                    <select class="custom-select" name="availableRoom">
-                    <?php foreach ($roomNumbers as $roomNumber) : ?>
-            <option value="<?php echo $roomNumber; ?>"><?php echo $roomNumber; ?></option>
-        <?php endforeach; ?>
+                    <select class="custom-select" name="availableRoom" required>
+                        <?php foreach ($roomNumbers as $roomNumber) : ?>
+                            <option value="<?php echo $roomNumber; ?>"><?php echo $roomNumber; ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
             </div>
@@ -64,9 +115,6 @@ while ($row = $result->fetch_assoc()) {
                 <input type="submit" class="form-control" value="Book Room" name="submit">
             </div>
         </form>
-        <?php
-        
-        ?>
     </div>
 </body>
 
