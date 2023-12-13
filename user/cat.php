@@ -69,7 +69,7 @@ function getRoomRates($conn) {
       </div>
       <div class="cta-section">
         <div class="text-white"><?php echo 'Rs.' . number_format($deluxRate, 2); ?></div>
-        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Delux";?>&email=<?php echo $mail?>" class="btn btn-dark">Book Now</a>
+        <a href="<?php echo siteurl;?>user/book.php?room_type=<?php echo "Deluxe";?>&email=<?php echo $mail?>" class="btn btn-dark">Book Now</a>
       </div>
     </div>
   </div>
