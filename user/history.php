@@ -43,7 +43,7 @@
                             </thead>
                             <tbody>
                             <?php
-                                    $sql = "SELECT * FROM booking WHERE email='$email";
+                                    $sql = "SELECT * FROM booking WHERE email='$email'";
                                     $res = mysqli_query($conn, $sql);
                                     if($res == TRUE){
                                         $count = mysqli_num_rows($res);
