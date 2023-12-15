@@ -1,7 +1,6 @@
 <?php
 include('./ad_nav.php');
 
-
 $sql = "SELECT room_type, COUNT(*) AS booking_count
         FROM booking
         GROUP BY room_type
@@ -16,6 +15,7 @@ if ($result) {
 } else {
     $mostBookedRoomType = "N/A"; // Set a default value if the query fails
 }
+
 // Booking Overview
 $todayBookings = getBookingCount($conn, 'today');
 $weekBookings = getBookingCount($conn, 'week');
@@ -90,6 +90,7 @@ function getRevenue($conn, $interval)
         return 0;
     }
 }
+
 function getMaintenanceRooms($conn)
 {
     $query = "SELECT room_no, room_type, bed_type, rate FROM room WHERE status = 'Unavailable'";
@@ -108,8 +109,8 @@ function getMaintenanceRooms($conn)
 
 ?>
 
- <!-- offcanvas -->
- <main class="mt-5 pt-3">
+<!-- offcanvas -->
+<main class="mt-5 pt-3">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4 mb-3">
@@ -165,8 +166,7 @@ function getMaintenanceRooms($conn)
                 </div>
             </div>
         </div>
-        
-       
-    </main>
+    </div>
+</main>
 </body>
 </html>
