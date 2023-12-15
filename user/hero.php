@@ -1,6 +1,6 @@
  
   
-    <div lc-helper="background" class="container-fluid py-5 mt-5  d-flex justify-content-center" style="  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1124&amp;q=100');
+    <div lc-helper="background" class="container-fluid py-5 mt-5  d-flex justify-content-center" style="  background-image: url('https://images.unsplash.com/photo-1517840901100-8179e982acb7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjBib29raW5nfGVufDB8fDB8fHww');
     background-position: center;
 background-size:cover;
 background-repeat:no-repeat">
@@ -11,17 +11,17 @@ background-repeat:no-repeat">
     border: 1px solid rgba(209, 213, 219, 0.3);">
 		<div class="lc-block">
 			<div editable="rich">
-				<h2 class="fw-bolder display-3">Custom jumbotron</h2>
+				<h2 class="fw-bolder display-3">Welcome to Orange Hotel</h2>
 			</div>
 		</div>
 		<div class="lc-block col-md-8">
 			<div editable="rich">
-				<p class="lead">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
+				<p class="lead">Discover a Luxurious Stay with Unmatched Comfort
 				</p>
 			</div>
 		</div>
 		<div class="lc-block">
-			<a class="btn btn-dark" href="#" role="button">Click me, I'm a button</a>
+			<a class="btn btn-dark" href="#" role="button">Book Now</a>
 		</div>
 	</div>
 </div>

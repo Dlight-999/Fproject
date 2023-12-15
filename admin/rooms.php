@@ -68,6 +68,7 @@
 
         <li><a class="dropdown-item" href="<?php echo siteurl;?>admin/change_status.php?id=<?php echo $id;?>&status=Available">Set Available</a></li>
         <li><a class="dropdown-item" href="<?php echo siteurl;?>admin/change_status.php?id=<?php echo $id;?>&status=Booked">Set Booked</a></li>
+        <li><a class="dropdown-item" href="<?php echo siteurl;?>admin/change_status.php?id=<?php echo $id;?>&status=Unavailable">Set Unavailable</a></li>
     </ul>
 </div>
 

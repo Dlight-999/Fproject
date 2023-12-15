@@ -19,8 +19,8 @@ include('../user/bootstrap_headder.php');
         </button>
         <a
           class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
-          href="#"
-          >BrandName</a
+          href="dash.php"
+          >Hotel Orange</a
         >
         <button
           class="navbar-toggler"
@@ -84,7 +84,7 @@ include('../user/bootstrap_headder.php');
               </div>
             </li>
             <li>
-              <a href="#" class="nav-link px-3 active">
+              <a href="dash.php" class="nav-link px-3 active">
                 <span class="me-2"><i class="bi bi-speedometer2"></i></span>
                 <span>Dashboard</span>
               </a>
@@ -112,7 +112,7 @@ include('../user/bootstrap_headder.php');
               <div class="collapse" id="layouts">
                 <ul class="navbar-nav ps-3">
                   <li>
-                    <a href="#" class="nav-link px-3">
+                    <a href="dash.php" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-speedometer2"></i
                       ></span>
