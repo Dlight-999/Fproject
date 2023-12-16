@@ -11,7 +11,7 @@ background-repeat:no-repeat">
     border: 1px solid rgba(209, 213, 219, 0.3);">
 		<div class="lc-block">
 			<div editable="rich">
-				<h2 class="fw-bolder display-3">Welcome to Orange Hotel</h2>
+				<h2 class="fw-bolder display-3">Welcome to Hotel Orange</h2>
 			</div>
 		</div>
 		<div class="lc-block col-md-8">
