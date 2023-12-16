@@ -33,16 +33,16 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!" class="text-white">Facebook</a>
+              <a href="#!" class="text-white"><i class="bi bi-facebook"></i>Facebook</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Instagram</a>
+              <a href="#!" class="text-white"><i class="bi bi-instagram"></i>Instagram</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Linked in</a>
+              <a href="#!" class="text-white"><i class="bi bi-linkedin"></i>Linked in</a>
             </li>
             <li>
-              <a href="#!" class="text-white">Line</a>
+              <a href="#!" class="text-white"><i class="bi bi-facebook"></i>Line</a>
             </li>
           </ul>
         </div>

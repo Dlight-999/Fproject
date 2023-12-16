@@ -124,19 +124,19 @@ include('../user/bootstrap_headder.php');
             </li>
             <li>
               <a href="./admins.php" class="nav-link px-3">
-                <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                <span class="me-2"><i class="bi bi-person-check"></i></span>
                 <span>Admins</span>
               </a>
             </li>
             <li>
               <a href="./rooms.php" class="nav-link px-3">
-                <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                <span class="me-2"><i class="bi bi-house"></i></i></span>
                 <span>Rooms</span>
               </a>
             </li>
             <li>
               <a href="./user.php" class="nav-link px-3">
-                <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                <span class="me-2"><i class="bi bi-person"></i></span>
                 <span>Users</span>
               </a>
             </li>
@@ -144,6 +144,12 @@ include('../user/bootstrap_headder.php');
               <a href="./history.php" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
                 <span>Bookings</span>
+              </a>
+            </li>
+            <li>
+              <a href="./query.php" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                <span>Queries</span>
               </a>
             </li>
             <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
